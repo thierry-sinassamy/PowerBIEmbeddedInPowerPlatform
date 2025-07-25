@@ -97,25 +97,3 @@ finally
     }               
     Util.AppendTextToLogFile(sCurrentDirectory, logFile, initialMessage);//Text File Log
 }
-
-#region Code in comments
-/*
-try
-{
-    var serviceClient = new ServiceClient(connectionString);
-    if (serviceClient.IsReady)
-    {
-        Console.WriteLine("Connected to Dataverse!");        
-    }
-    else
-    {
-        Console.WriteLine("Failed to connect to Dataverse.");
-    }
-}
-catch (DataverseConnectionException ex)
-{
-    Console.WriteLine(ex.Message);
-    Console.WriteLine(ex.InnerException);
-}
-*/
-#endregion
