@@ -16,3 +16,20 @@ In addition to this, there is another drawback of the Power Platform: it does no
 Also, on the Power BI Service side, it is not possible to capture an event when a modified report is deployed to a workspace. In fact, an event is generated, but it is only accessible to the Power BI Service administrator—that is, the administrator of the Power BI Admin Center.
 
 <img width="1044" height="415" alt="image" src="https://github.com/user-attachments/assets/70e2c7f9-2da6-4308-93d6-a1fd4a47fd56" />
+
+## Solution
+The inability to capture an event on either platform—or to obtain an error log from Power Platform—becomes a critical factor in the decision-making process when choosing a solution.
+
+To address this, a robust solution involves developing a background service that acts as a scheduled job rather than a real-time listener. This service would:
+
+Periodically query the Dataverse to retrieve the current report references (GUIDs or URLs).
+
+Validate these references against the actual reports available in the Power BI workspace using the Power BI REST API.
+
+Identify mismatches between stored GUIDs and active reports.
+
+Automatically update the Dataverse with the correct GUIDs or URLs when discrepancies are found.
+
+This scheduled approach ensures consistency between the Dataverse and Power BI without introducing latency or complexity into the Power Apps runtime. It also avoids the overhead of implementing real-time event listeners or webhooks, which may not be necessary for this use case.
+
+<img width="936" height="389" alt="image" src="https://github.com/user-attachments/assets/40add804-b522-4801-b332-794b4b4249e5" />
