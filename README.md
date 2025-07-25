@@ -14,3 +14,5 @@ To mitigate this, it is essential to implement validation mechanisms to ensure G
 In addition to this, there is another drawback of the Power Platform: it does not generate any events or error logs. As a result, it becomes nearly impossible to capture the occurrence of the error when the Power BI report fails to load in the iframe of the Power Apps form.
 
 Also, on the Power BI Service side, it is not possible to capture an event when a modified report is deployed to a workspace. In fact, an event is generated, but it is only accessible to the Power BI Service administrator—that is, the administrator of the Power BI Admin Center.
+
+<img width="1044" height="415" alt="image" src="https://github.com/user-attachments/assets/70e2c7f9-2da6-4308-93d6-a1fd4a47fd56" />
