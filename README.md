@@ -1,7 +1,7 @@
 # PowerBIEmbeddedInPowerPlatform
 
 ## Problem
-In a Power Apps form within the Microsoft Power Platform, it is necessary to embed a Power BI report when we want to display one. From a technical standpoint, the Power Platform’s Dataverse stores data in XML format, which includes a link to the Power BI service—specifically pointing to the report intended for display.
+In a Power Apps form within the Microsoft Power Platform, it would be necessary to embed a Power BI report when we want to display one. From a technical standpoint, the Power Platform’s Dataverse stores data in XML format, which includes a link to the Power BI service—specifically pointing to the report intended for display.
 
 The issue arises when the GUID of the Power BI report stored in the Dataverse SQL database no longer matches the GUID of the report currently deployed in the Power BI environment. 
 
